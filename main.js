@@ -57,6 +57,9 @@ const closeNav = () => {
 
 closeNavBtn.addEventListener("click", closeNav);
 
-nav.querySelectorAll("li a").forEach((navLink) => {
-  navLink.addEventListener("click", closeNav);
-});
+//close nav menu on click of menu link
+if (document.body.clientWidth < 1024) {
+  nav.querySelectorAll("li a").forEach((navLink) => {
+    navLink.addEventListener("click", closeNav);
+  });
+}
